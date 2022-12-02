@@ -9,7 +9,7 @@ const OTPInput = ({length}:Props) => {
     const [otp, setOtp] = useState(new Array(length).fill(''))
     const [activeOTPBox,setActiveOTPBox] = useState<number>(0)
     const inputRef = useRef<HTMLInputElement>(null)
-    const onChangeHandler =({preventDefault,target:{value}} : ChangeEvent<HTMLInputElement>) =>{
+    const onChangeHandler =({target:{value}} : ChangeEvent<HTMLInputElement>) =>{
         if(!isNaN(Number(value))){
         const newOTP:string[] = [...otp]
         newOTP[otpCurrentIndex] = value.substring(value.length-1) 

@@ -16,7 +16,7 @@ const OTPInput = ({length}:Props) => {
         if(!value) setActiveOTPBox(otpCurrentIndex-1 )
         else setActiveOTPBox(otpCurrentIndex+1)
         setOtp(newOTP)
-        }else preventDefault()
+        }
     }
 
     const onKeyDownHandler = ({preventDefault,key,currentTarget:{value}}:KeyboardEvent<HTMLInputElement> , index:number) => {

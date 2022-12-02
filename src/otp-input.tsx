@@ -38,6 +38,7 @@ const OTPInput = ({length}:Props) => {
             return (
               <React.Fragment key={index}>
                 <input
+                pattern="\d*"
                   value={otp[index]}
                   onKeyDown={(e)=>onKeyDownHandler(e,index)}
                   ref={index === activeOTPBox ? inputRef :null }
